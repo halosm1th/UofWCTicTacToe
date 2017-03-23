@@ -5,6 +5,8 @@
  */
 package tictactoe;
 
+import javax.swing.*;
+
 /**
  *
  * @author orion
@@ -14,7 +16,10 @@ public class GUI extends javax.swing.JFrame {
     /**
      * Creates new form GUI
      */
-    private boolean isPressed = false;
+    //When it is true, X is the next move; 
+    //When it is false, O is the next move.
+    private boolean isPressed = true; 
+    
     public GUI() {
         initComponents();
     }
@@ -356,7 +361,7 @@ public class GUI extends javax.swing.JFrame {
         });
     }
     
-    private void markX(javax.swing.JButton n){
+    private void markX(JButton n){
         n.setText(isPressed? "X" : "O");
         isPressed = !isPressed;
     }
