@@ -17,7 +17,15 @@ public class AI {
 
     public Coordinates getNextMove(){
         Coordinates returnCords = new Coordinates(0,0);
-
+        
         return returnCords;
+    }
+    
+    public boolean isValid(Coordinates c){
+        if(gameBoard[c.getX()][c.getY()] == 0){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
