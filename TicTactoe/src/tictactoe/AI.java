@@ -15,7 +15,9 @@ public class AI {
         gameBoard= gb;
     }
 
-    public void getNextMove(){
+    public Coordinates getNextMove(){
+        Coordinates returnCords = new Coordinates(0,0);
 
+        return returnCords;
     }
 }
