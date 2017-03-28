@@ -35,8 +35,14 @@ public class AI {
          for (int y = 0; y < 3; y++) { //cycle through 3 collumns
            if(gameBoard[x][y] == 0){
             gameBoard[x][y] = 2;
-            //check state, return win/loss/draw/cont 
+            //check state, return win/draw/cont 
             gameBoard[x][y] = 0;
+            //if not win
+            //do cycle on node for player
+            //if all are cont
+            //do cycle on node again
+            //if not win
+           
             
             //if win: end tree and make move
             //if loss: do not look further in tree >how?
