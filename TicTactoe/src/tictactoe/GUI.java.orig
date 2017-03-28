@@ -63,11 +63,14 @@ public class GUI extends javax.swing.JFrame {
         aiScoreLabel = new javax.swing.JLabel();
         aiNameBox = new javax.swing.JLabel();
         userNameBox = new javax.swing.JLabel();
+<<<<<<< HEAD
         jPanel2 = new javax.swing.JPanel();
         errorLabel = new javax.swing.JLabel();
+=======
         clearCountBt = new javax.swing.JButton();
         changeUserNameBt = new javax.swing.JButton();
         restartBt = new javax.swing.JButton();
+>>>>>>> 8742e41187956ecda9883437d4cfe6c4fb447913
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -131,7 +134,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jSeparator2)
                     .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(0, 0, 0)
-		.addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         oneZero.setMaximumSize(new java.awt.Dimension(60, 60));
@@ -377,6 +380,7 @@ public class GUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -385,27 +389,33 @@ public class GUI extends javax.swing.JFrame {
                         .addComponent(gameborad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(5, 5, 5)
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+=======
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(gameborad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+>>>>>>> 8742e41187956ecda9883437d4cfe6c4fb447913
                 .addGap(15, 15, 15))
-        ));
+        );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< HEAD
                     .addComponent(gameborad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+=======
                     .addGroup(layout.createSequentialGroup()
                         .addGap(33, 33, 33)
                         .addComponent(gameborad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                ;//.addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE);
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> 8742e41187956ecda9883437d4cfe6c4fb447913
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -578,11 +588,14 @@ public class GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     private javax.swing.JLabel errorLabel;
+=======
     private javax.swing.JLabel aiNameBox;
     private javax.swing.JLabel aiScoreLabel;
     private javax.swing.JButton changeUserNameBt;
     private javax.swing.JButton clearCountBt;
+>>>>>>> 8742e41187956ecda9883437d4cfe6c4fb447913
     private javax.swing.JPanel firstLine;
     private javax.swing.JPanel gameborad;
     private javax.swing.JLabel humanScoreLabel;
@@ -610,4 +623,5 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton zeroOne;
     private javax.swing.JButton zeroTwo;
     private javax.swing.JButton zeroZero;
-    }
+    // End of variables declaration//GEN-END:variables
+}
