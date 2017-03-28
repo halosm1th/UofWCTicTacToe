@@ -20,6 +20,8 @@ public class GUI extends javax.swing.JFrame {
     //When it is false, O is the next move.
     private boolean isPressed = false; 
     
+    Coordinates c;
+    
     public GUI() {
         initComponents();
         setUserName();
@@ -61,6 +63,8 @@ public class GUI extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         userNameBox = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        errorLabel = new javax.swing.JLabel();
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -309,15 +313,35 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap(168, Short.MAX_VALUE))
         );
 
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(errorLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(errorLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(gameborad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(5, 5, 5)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(gameborad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(5, 5, 5)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(15, 15, 15))
         );
         layout.setVerticalGroup(
@@ -327,7 +351,9 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(gameborad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -335,48 +361,56 @@ public class GUI extends javax.swing.JFrame {
 
     private void zeroZeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zeroZeroActionPerformed
         // TODO add your handling code here:
-        markX(zeroZero);
+        markO(zeroZero);
+        c = new Coordinates(0, 0);
     }//GEN-LAST:event_zeroZeroActionPerformed
 
     private void zeroOneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zeroOneActionPerformed
         // TODO add your handling code here:
-        markX(zeroOne);
-        //oneZero.setText("O");
+        markO(zeroOne);
+        c = new Coordinates(0, 1);
     }//GEN-LAST:event_zeroOneActionPerformed
 
     private void zeroTwoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zeroTwoActionPerformed
         // TODO add your handling code here:
-        markX(zeroTwo);
+        markO(zeroTwo);
+        c = new Coordinates(0, 2);
     }//GEN-LAST:event_zeroTwoActionPerformed
 
     private void oneZeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneZeroActionPerformed
         // TODO add your handling code here:
-        markX(oneZero);
+        markO(oneZero);
+        c = new Coordinates(1, 0);
     }//GEN-LAST:event_oneZeroActionPerformed
 
     private void oneOneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneOneActionPerformed
         // TODO add your handling code here:
-        markX(oneOne);
+        markO(oneOne);
+        c = new Coordinates(1, 1);
     }//GEN-LAST:event_oneOneActionPerformed
 
     private void oneTwoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneTwoActionPerformed
         // TODO add your handling code here:
-        markX(oneTwo);
+        markO(oneTwo);
+        c = new Coordinates(1, 2);
     }//GEN-LAST:event_oneTwoActionPerformed
 
     private void twoZeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoZeroActionPerformed
         // TODO add your handling code here:
-        markX(twoZero);
+        markO(twoZero);
+        c = new Coordinates(2, 0);
     }//GEN-LAST:event_twoZeroActionPerformed
 
     private void twoOneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoOneActionPerformed
         // TODO add your handling code here:
-        markX(twoOne);
+        markO(twoOne);
+        c = new Coordinates(2, 1);
     }//GEN-LAST:event_twoOneActionPerformed
 
     private void twoTwoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoTwoActionPerformed
         // TODO add your handling code here:
-        markX(twoTwo);
+        markO(twoTwo);
+        c = new Coordinates(2, 2);
     }//GEN-LAST:event_twoTwoActionPerformed
 
     /**
@@ -415,12 +449,55 @@ public class GUI extends javax.swing.JFrame {
         });
     }
     
-    private void markX(JButton n){
+    private void markO(JButton n){
         /*if (n.getText() == "") {
             n.setText(isPressed? "X" : "O");
             isPressed = !isPressed;
         }*/
         n.setText("O");
+    }
+    
+    private void markX(JButton n){
+        /*if (n.getText() == "") {
+            n.setText(isPressed? "X" : "O");
+            isPressed = !isPressed;
+        }*/
+        n.setText("X");
+    }
+    
+    protected void getComputer(String s){
+        
+        switch(s){
+            
+            case "0,0": markX(zeroZero);
+                        break;
+                        
+            case "0,1": markX(zeroOne);
+                        break;
+                        
+            case "0,2": markX(zeroTwo);
+                        break;
+            
+            case "1,0": markX(oneZero);
+                        break;
+                        
+            case "1,1": markX(oneOne);
+                        break;
+                        
+            case "1,2": markX(oneTwo);
+                        break;
+                        
+            case "2,0": markX(twoZero);
+                        break;
+                        
+            case "2,1": markX(twoOne);
+                        break;
+                        
+            case "2,2": markX(twoTwo);
+                        break;
+                        
+            default:    errorLabel.setText("Inappropriate move");
+        }
     }
     
     private void setUserName() {
@@ -429,6 +506,7 @@ public class GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel errorLabel;
     private javax.swing.JPanel firstLine;
     private javax.swing.JPanel gameborad;
     private javax.swing.JComboBox<String> jComboBox1;
@@ -436,6 +514,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
