@@ -12,7 +12,7 @@ package tictactoe;
 public class AI {
     public int[][] gameBoard;
     public AI(int[][] gb){
-        gameBoard= gb;
+        duplicateArray(gb, gameBoard);
     }
 
     public Coordinates getNextMove(){
@@ -28,4 +28,25 @@ public class AI {
             return false;
         }
     }
+  
+    private void findMove(
+    ){ // Method for finding the best move to take by the computer. Searches 3(?) deep.
+      for (int x = 0; i < 3; i++) {  //cycle through 3 rows
+         for (int y = 0; y < 3; y++) { //cycle through 3 collumns
+           gameBoard[x][y] = 2;
+           //check win
+           gameBoard[x][y] = 0;
+         }
+       }
+    }
+  
+  private void duplicateArray(int[][] inArray, // array to copy from
+                              int[][] outArray // array to copy to
+                             ) {
+    for (int i = 0; i < inArray.
+  }
+
+
+
+
 }
