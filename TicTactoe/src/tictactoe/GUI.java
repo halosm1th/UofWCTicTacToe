@@ -482,10 +482,11 @@ public class GUI extends javax.swing.JFrame {
     }
     
     private void markX(JButton n){
-        if (n.getText() == "") {
+        /*if (n.getText() == "") {
             n.setText(isPressed? "X" : "O");
             isPressed = !isPressed;
-        }
+        }*/
+        n.setText("O");
     }
     
     private void setUserName() {
