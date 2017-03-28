@@ -480,7 +480,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="clearCountBt">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Clear Countings"/>
+            <Property name="text" type="java.lang.String" value="Clear Score"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearCountBtActionPerformed"/>

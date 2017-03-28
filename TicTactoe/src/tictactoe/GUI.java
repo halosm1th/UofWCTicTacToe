@@ -287,7 +287,7 @@ public class GUI extends javax.swing.JFrame {
         userNameBox.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         userNameBox.setText("HUMAN");
 
-        clearCountBt.setText("Clear Countings");
+        clearCountBt.setText("Clear Score");
         clearCountBt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clearCountBtActionPerformed(evt);
@@ -465,11 +465,14 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_twoTwoActionPerformed
 
     private void clearCountBtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearCountBtActionPerformed
-        // TODO add your handling code here:
+        // Clear coutings
+        clearCouting();
     }//GEN-LAST:event_clearCountBtActionPerformed
 
     private void changeUserNameBtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeUserNameBtActionPerformed
-        // TODO add your handling code here:
+        // Clear Coutings and User Name and Restart 
+        setUserName();
+        clearCouting();
     }//GEN-LAST:event_changeUserNameBtActionPerformed
 
     private void restartBtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restartBtActionPerformed
@@ -576,6 +579,13 @@ public class GUI extends javax.swing.JFrame {
         String u = JOptionPane.showInputDialog(null, "Enter user name please");
         userNameBox.setText(u);
     }
+    
+    private void clearCouting(){
+        aiScoreLabel.setText("0");
+        humanScoreLabel.setText("0");
+    }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel errorLabel;
