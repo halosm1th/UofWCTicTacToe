@@ -18,7 +18,7 @@ public class GUI extends javax.swing.JFrame {
      */
     //When it is true, X is the next move; 
     //When it is false, O is the next move.
-    private boolean isPressed = true; 
+    private boolean isPressed = false; 
     
     public GUI() {
         initComponents();
@@ -33,6 +33,7 @@ public class GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jComboBox1 = new javax.swing.JComboBox<>();
         gameborad = new javax.swing.JPanel();
         firstLine = new javax.swing.JPanel();
         zeroZero = new javax.swing.JButton();
@@ -54,6 +55,8 @@ public class GUI extends javax.swing.JFrame {
         twoTwo = new javax.swing.JButton();
         jSeparator8 = new javax.swing.JSeparator();
         jSeparator9 = new javax.swing.JSeparator();
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -362,13 +365,16 @@ public class GUI extends javax.swing.JFrame {
     }
     
     private void markX(JButton n){
-        n.setText(isPressed? "X" : "O");
-        isPressed = !isPressed;
+        if (n.getText() == "") {
+            n.setText(isPressed? "X" : "O");
+            isPressed = !isPressed;
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel firstLine;
     private javax.swing.JPanel gameborad;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
