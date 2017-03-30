@@ -16,6 +16,12 @@ public class TicTactoe {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        int[][] board = new int[3][3];
+        
+        while(true){
+            AI allie = new AI(board);
+            allie.getNextMove();
+        }
     }
     
 }
