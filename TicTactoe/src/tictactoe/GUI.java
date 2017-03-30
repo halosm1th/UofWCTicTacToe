@@ -310,16 +310,11 @@ public class GUI extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(clearCountBt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(changeUserNameBt, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(restartBt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(clearCountBt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(changeUserNameBt, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                    .addComponent(restartBt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -338,9 +333,9 @@ public class GUI extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(aiNameBox)
-                    .addComponent(userNameBox, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(userNameBox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aiNameBox))
                 .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(aiScoreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -478,13 +473,55 @@ public class GUI extends javax.swing.JFrame {
             }
         });
     }
+     private void markO(JButton n){
+        /*if (n.getText() == "") {
+            n.setText(isPressed? "X" : "O");
+            isPressed = !isPressed;
+        }*/
+        n.setText("O");
+    }
     
     private void markX(JButton n){
         /*if (n.getText() == "") {
             n.setText(isPressed? "X" : "O");
             isPressed = !isPressed;
         }*/
-        n.setText("O");
+        n.setText("X");
+    }
+    
+    protected void getComputer(String s){
+        
+        switch(s){
+            
+            case "0,0": markX(zeroZero);
+                        break;
+                        
+            case "0,1": markX(zeroOne);
+                        break;
+                        
+            case "0,2": markX(zeroTwo);
+                        break;
+            
+            case "1,0": markX(oneZero);
+                        break;
+                        
+            case "1,1": markX(oneOne);
+                        break;
+                        
+            case "1,2": markX(oneTwo);
+                        break;
+                        
+            case "2,0": markX(twoZero);
+                        break;
+                        
+            case "2,1": markX(twoOne);
+                        break;
+                        
+            case "2,2": markX(twoTwo);
+                        break;
+                        
+            default:    //errorLabel.setText("Inappropriate move");
+        }
     }
     
     private void setUserName() {
