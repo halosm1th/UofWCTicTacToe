@@ -521,7 +521,7 @@ public class GUI extends javax.swing.JFrame {
         n.setText("O");
     }
     
-    private void markO(JButton n){
+    private void markX(JButton n){
         /*if (n.getText() == "") {
             n.setText(isPressed? "X" : "O");
             isPressed = !isPressed;
@@ -629,7 +629,7 @@ public class GUI extends javax.swing.JFrame {
         twoTwo.setText("");
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JLabel errorLabel;
     private javax.swing.JLabel aiNameBox;
     private javax.swing.JLabel aiScoreLabel;
