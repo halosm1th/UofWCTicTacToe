@@ -6,12 +6,12 @@ public class Coordinates {
     
     private int x;
     private int y;
+    private String s;
 
     protected Coordinates(int _x, int _y){
         x = _x;
         y = _y;
     }
-
 
     protected int getX() {
         return x;
@@ -20,4 +20,12 @@ public class Coordinates {
     protected int getY() {
         return y;
     }
+    
+    protected String getString() {
+        
+        String s = ""+x+","+y;
+        
+        return s;
+    }
+    
 }

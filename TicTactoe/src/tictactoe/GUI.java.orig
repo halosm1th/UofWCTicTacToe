@@ -25,7 +25,6 @@ public class GUI extends javax.swing.JFrame {
     public GUI() {
         initComponents();
         setUserName();
-        
     }
 
     /**
@@ -64,11 +63,14 @@ public class GUI extends javax.swing.JFrame {
         aiScoreLabel = new javax.swing.JLabel();
         aiNameBox = new javax.swing.JLabel();
         userNameBox = new javax.swing.JLabel();
+<<<<<<< HEAD
         jPanel2 = new javax.swing.JPanel();
         errorLabel = new javax.swing.JLabel();
+=======
         clearCountBt = new javax.swing.JButton();
         changeUserNameBt = new javax.swing.JButton();
         restartBt = new javax.swing.JButton();
+>>>>>>> 8742e41187956ecda9883437d4cfe6c4fb447913
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -132,7 +134,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jSeparator2)
                     .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(0, 0, 0)
-		.addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         oneZero.setMaximumSize(new java.awt.Dimension(60, 60));
@@ -288,7 +290,7 @@ public class GUI extends javax.swing.JFrame {
         userNameBox.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         userNameBox.setText("HUMAN");
 
-        clearCountBt.setText("Clear Score");
+        clearCountBt.setText("Clear Countings");
         clearCountBt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clearCountBtActionPerformed(evt);
@@ -314,36 +316,40 @@ public class GUI extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(humanScoreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(aiScoreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(userNameBox)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(aiNameBox)
+                .addGap(36, 36, 36))
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(clearCountBt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(changeUserNameBt, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
-                    .addComponent(restartBt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(clearCountBt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(humanScoreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 6, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(userNameBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(aiNameBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(aiScoreLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(changeUserNameBt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(restartBt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(userNameBox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(aiNameBox))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(aiNameBox)
+                    .addComponent(userNameBox))
                 .addGap(10, 10, 10)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(aiScoreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(humanScoreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(humanScoreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(restartBt, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
@@ -374,6 +380,7 @@ public class GUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -382,27 +389,33 @@ public class GUI extends javax.swing.JFrame {
                         .addComponent(gameborad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(5, 5, 5)
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+=======
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(gameborad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+>>>>>>> 8742e41187956ecda9883437d4cfe6c4fb447913
                 .addGap(15, 15, 15))
-        ));
+        );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< HEAD
                     .addComponent(gameborad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+=======
                     .addGroup(layout.createSequentialGroup()
                         .addGap(33, 33, 33)
                         .addComponent(gameborad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                ;//.addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE);
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> 8742e41187956ecda9883437d4cfe6c4fb447913
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -462,20 +475,24 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_twoTwoActionPerformed
 
     private void clearCountBtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearCountBtActionPerformed
-        // Clear coutings
-        clearCouting();
+        // TODO add your handling code here:
     }//GEN-LAST:event_clearCountBtActionPerformed
 
     private void changeUserNameBtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeUserNameBtActionPerformed
-        // Clear Coutings and User Name and Clear Gameboard
-        setUserName();
-        clearCouting();
-        resetGameboard();
+        // TODO add your handling code here:
     }//GEN-LAST:event_changeUserNameBtActionPerformed
 
     private void restartBtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restartBtActionPerformed
         //Reset all the text of all buttons
-        resetGameboard();
+        zeroZero.setText("");
+        zeroOne.setText("");
+        zeroTwo.setText("");
+        oneZero.setText("");
+        oneOne.setText("");
+        oneTwo.setText("");
+        twoZero.setText("");
+        twoOne.setText("");
+        twoTwo.setText("");
     }//GEN-LAST:event_restartBtActionPerformed
 
     /**
@@ -513,55 +530,13 @@ public class GUI extends javax.swing.JFrame {
             }
         });
     }
-     private void markO(JButton n){
-        /*if (n.getText() == "") {
-            n.setText(isPressed? "X" : "O");
-            isPressed = !isPressed;
-        }*/
-        n.setText("O");
-    }
     
     private void markO(JButton n){
         /*if (n.getText() == "") {
             n.setText(isPressed? "X" : "O");
             isPressed = !isPressed;
         }*/
-        n.setText("X");
-    }
-    
-    protected void getComputer(String s){
-        
-        switch(s){
-            
-            case "0,0": markX(zeroZero);
-                        break;
-                        
-            case "0,1": markX(zeroOne);
-                        break;
-                        
-            case "0,2": markX(zeroTwo);
-                        break;
-            
-            case "1,0": markX(oneZero);
-                        break;
-                        
-            case "1,1": markX(oneOne);
-                        break;
-                        
-            case "1,2": markX(oneTwo);
-                        break;
-                        
-            case "2,0": markX(twoZero);
-                        break;
-                        
-            case "2,1": markX(twoOne);
-                        break;
-                        
-            case "2,2": markX(twoTwo);
-                        break;
-                        
-            default:    //errorLabel.setText("Inappropriate move");
-        }
+        n.setText("O");
     }
     
     private void markX(JButton n){
@@ -611,30 +586,16 @@ public class GUI extends javax.swing.JFrame {
         String u = JOptionPane.showInputDialog(null, "Enter user name please");
         userNameBox.setText(u);
     }
-    
-    private void clearCouting(){
-        aiScoreLabel.setText("0");
-        humanScoreLabel.setText("0");
-    }
-    
-    private void resetGameboard() {
-        zeroZero.setText("");
-        zeroOne.setText("");
-        zeroTwo.setText("");
-        oneZero.setText("");
-        oneOne.setText("");
-        oneTwo.setText("");
-        twoZero.setText("");
-        twoOne.setText("");
-        twoTwo.setText("");
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     private javax.swing.JLabel errorLabel;
+=======
     private javax.swing.JLabel aiNameBox;
     private javax.swing.JLabel aiScoreLabel;
     private javax.swing.JButton changeUserNameBt;
     private javax.swing.JButton clearCountBt;
+>>>>>>> 8742e41187956ecda9883437d4cfe6c4fb447913
     private javax.swing.JPanel firstLine;
     private javax.swing.JPanel gameborad;
     private javax.swing.JLabel humanScoreLabel;
@@ -662,4 +623,5 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton zeroOne;
     private javax.swing.JButton zeroTwo;
     private javax.swing.JButton zeroZero;
-    }
+    // End of variables declaration//GEN-END:variables
+}
