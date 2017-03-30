@@ -1,35 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+// Co-ordinates class that gets and passes the input cell
+
 package tictactoe;
 
-/**
- *
- * @author Halo
- */
 public class Coordinates {
+    
     private int x;
     private int y;
     private char winLoss;
-
     public Coordinates(int _x, int _y, char _winloss){
-        x = _x;
-        y = _y;
-    }
 
-
-    public int getX() {
+    protected int getX() {
         return x;
     }
 
-    public int getY() {
+    protected int getY() {
         return y;
     }
 
     public char getWinLoss(){return winLoss;}
-
 
     public String toString(){
         return "" + getX() + " " + getY() + " " + getWinLoss();
