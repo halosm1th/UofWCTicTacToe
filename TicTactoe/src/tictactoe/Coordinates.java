@@ -12,8 +12,9 @@ package tictactoe;
 public class Coordinates {
     private int x;
     private int y;
+    private char winLoss;
 
-    public Coordinates(int _x, int _y){
+    public Coordinates(int _x, int _y, char _winloss){
         x = _x;
         y = _y;
     }
@@ -25,5 +26,12 @@ public class Coordinates {
 
     public int getY() {
         return y;
+    }
+
+    public char getWinLoss(){return winLoss;}
+
+
+    public String toString(){
+        return "" + getX() + " " + getY() + " " + getWinLoss();
     }
 }
