@@ -1,7 +1,5 @@
 // Co-ordinates class that gets and passes the input cell
 
-package tictactoe;
-
 public class Coordinates {
     
     private int x;

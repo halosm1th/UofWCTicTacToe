@@ -15,13 +15,8 @@ public class TicTactoe {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        int[][] board = new int[3][3];
-        
-        while(true){
-            AI allie = new AI(board);
-            allie.getNextMove();
-        }
+        char[][] board = new char[][];
+        board[0][0] = 2;
     }
     
 }
