@@ -60,5 +60,10 @@ public class gameBoard {// start class gameBoard
                     + " code)");
         }//end else
         
-    }//end add piece 
+    }//end add piece
+    
+    public void setCoords(int x, int y, char f){//set a specific tile without changing the above (-Cr)
+        boardMatrix[x][y] = f;
+    }//end setCoords
+    
 }//end class 

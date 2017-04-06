@@ -36,7 +36,7 @@ public class AI {
     private Coordinates findMove(gameBoard gb
     ){ // Method for finding the best move to take by the computer.
         
-      gameBoard g = new gameBoard[gb.length][gb[0].length];
+      gameBoard g = new gameBoard();
       
       duplicateArray(gb, gameBoard);
       
@@ -68,12 +68,12 @@ public class AI {
       return(null);
     }
   
-  private void duplicateArray(char[][] inArray, // array to copy from
-                              char[][] outArray // array to copy to
+  private void duplicateArray(gameBoard in, // array to copy from
+                              gameBoard out // array to copy to
     ) {
     // Method duplicates a 2d int array from inArray to outArray
       
-    inArray = outArray.clone();
+    out.setCoordinates() = in;
       
     for (int i = 0; i < inArray.length; i++){
         outArray[i] = inArray[i].clone();
