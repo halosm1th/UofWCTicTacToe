@@ -10,6 +10,9 @@ package tictactoe;
  *
  * @author Halo
  */
+
+import Checker.checkWin;
+
 public class AI {
     public AI(gameBoard gbIn){
     
@@ -25,26 +28,64 @@ public class AI {
         return returnCoords;
     }
     
-    public boolean isValid(char[][] gb, Coordinates c){
-        if(gb[c.getX()][c.getY()] == 'N'){
-            return true;
-        }else{
-            return false;
-        }
+    public boolean isValid(gameBoard gb, Coordinates c){
+        return (gb.getCoor(c.getX(), c.getY()) == 'N'); // returns true / false
+                                                        // for an open tile
     }
   
     private Coordinates findMove(gameBoard gb
     ){ // Method for finding the best move to take by the computer.
-        
+      checkWin u = new checkWin();
       gameBoard g = new gameBoard();
       
-      duplicateArray(gb, gameBoard);
+      duplicateArray(gb, g);
       
-      for (int x = 0; x < 3; x++) {  //cycle through 3 rows
-         for (int y = 0; y < 3; y++) { //cycle through 3 collumns
+      for (int x = 0; x < g.getSize(); x++) {  //cycle through 3 rows
+         for (int y = 0; y < g.getSize(); y++) { //cycle through 3 collumns
            Coordinates pos = new Coordinates(x, y);
-           if(isValid(gameBoard, pos)){
-            gameBoard[pos.getX()][pos.getY()] = 2;
+           
+           /* Checks to see if the given x / y is an empty tile ('N')*/
+           
+           if(isValid(g, pos)){
+               
+               /*Sets the position to be AI*/
+               
+            g.setCoor(x, y, 'O');
+            
+               /*Checks the position to see if the move would result in a win*/
+            
+            if (u.isWin(g) == 'O') {
+                /* if it is a win, immediately return the Coordinates with the
+                win flag included */
+                pos.setWinLoss('O');
+                return (pos);
+           } else {
+                for (int xP = 0; xP < g.getSize(); xP++) {  //cycle through 3 rows
+                    for (int yP = 0; yP < g.getSize(); yP++) { //cycle through 3 collumns
+                        Coordinates posP = new Coordinates(xP, yP);
+                         
+                        /* Checks to see if the given x / y is
+                        an empty tile ('N')*/
+                        
+                        if(isValid(g, posP)){
+               
+                            /*Sets the position to be player*/
+
+                         g.setCoor(posP.getX(), posP.getY(), 'X');
+
+                            /*Checks the position to see if
+                         the move would result in a win*/
+
+                         if (u.isWin(g) == 'X') {
+                             /* if it is a win, immediately reset the board,
+                             break the chain back to the first x/y cycle
+                             and look for a new move */
+                             g.setCoor(pos.getX(), pos.getY(), 'N');
+                             g.setCoor(posP.getX(), posP.getY(), 'N');
+                             // Thomas make do! #######################################################################################
+                        } else {
+                             
+                         }
             //check state, return win/draw/cont;
             //if not win
                 //do cycle on node for player
@@ -72,12 +113,12 @@ public class AI {
                               gameBoard out // array to copy to
     ) {
     // Method duplicates a 2d int array from inArray to outArray
-      
-    out.setCoordinates() = in;
-      
-    for (int i = 0; i < inArray.length; i++){
-        outArray[i] = inArray[i].clone();
-    } 
+      for (int x = 0; x < out.getSize(); x ++) {
+          for (int y = 0; y < out.getSize(); y++) {
+              char f = in.getCoor(x, y);
+              out.setCoor(x, y, f);
+          }
+              
+    }
   }
-
 }
