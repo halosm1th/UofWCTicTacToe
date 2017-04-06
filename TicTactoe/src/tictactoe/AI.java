@@ -15,7 +15,7 @@ public class AI {
     }
 
     public Coordinates getNextMove(){
-        Coordinates returnCords = new Coordinates(0,0);
+        Coordinates returnCords = new Coordinates(0,0,4);
         
         return returnCords;
     }
