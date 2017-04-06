@@ -8,7 +8,13 @@ public class Coordinates {
     private int y;
     private char winLoss;
     public Coordinates(int _x, int _y, char _winloss){
-
+    }
+    
+    //deal with it
+    public void setWinLoss(char wL){//start setWinLoss
+        winLoss = wL;
+    }//end setWinLoss
+    
     protected int getX() {
         return x;
     }
