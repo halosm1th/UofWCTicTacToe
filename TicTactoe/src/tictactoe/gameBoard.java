@@ -26,6 +26,10 @@ public class gameBoard {// start class gameBoard
         return boardMatrix;
     }//end getBoard
     
+    public int getSize(){//return size of board (for AI -Cr)
+        return SIZE;
+    }//end getSize
+    
     //returns value at specified coordinates 
     public char getCoor(int x, int y){// start getCoor
         return boardMatrix[x][y];

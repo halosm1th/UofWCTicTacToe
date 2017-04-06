@@ -11,27 +11,32 @@ package tictactoe;
  * @author Halo
  */
 public class AI {
-    public AI(){
+    public AI(gameBoard gbIn){
+    
+    gameBoard gb = gbIn;
+        
     }
 
-    public Coordinates getNextMove(){
-        Coordinates returnCords = new Coordinates(0,0,4);
+    public Coordinates getNextMove(gameBoard gb){
+        Coordinates returnCoords = new Coordinates(0,0);
         
-        return returnCords;
+        returnCoords = findMove(gb);
+        
+        return returnCoords;
     }
     
     public boolean isValid(char[][] gb, Coordinates c){
-        if(gb[c.getX()][c.getY()] == 0){
+        if(gb[c.getX()][c.getY()] == 'N'){
             return true;
         }else{
             return false;
         }
     }
   
-    private Coordinates findMove(char[][] gb
+    private Coordinates findMove(gameBoard gb
     ){ // Method for finding the best move to take by the computer.
         
-      char[][] gameBoard = new char[gb.length][gb[0].length];
+      gameBoard g = new gameBoard[gb.length][gb[0].length];
       
       duplicateArray(gb, gameBoard);
       
