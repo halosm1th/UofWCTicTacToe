@@ -26,6 +26,10 @@ public class gameBoard {// start class gameBoard
         return boardMatrix;
     }//end getBoard
     
+    public int getSize(){//return size of board (for AI -Cr)
+        return SIZE;
+    }//end getSize
+    
     //returns value at specified coordinates 
     public char getCoor(int x, int y){// start getCoor
         return boardMatrix[x][y];
@@ -56,5 +60,10 @@ public class gameBoard {// start class gameBoard
                     + " code)");
         }//end else
         
-    }//end add piece 
+    }//end add piece
+    
+    public void setCoor(int x, int y, char f){//set a specific tile without changing the above (-Cr)
+        boardMatrix[x][y] = f;
+    }//end setCoordsz
+    
 }//end class 

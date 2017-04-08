@@ -7,7 +7,11 @@ public class Coordinates {
     private int x;
     private int y;
     private char winLoss;
+    
     public Coordinates(int _x, int _y, char _winloss){
+    }
+    
+    public Coordinates(int _x, int _y){
     }
     
     //deal with it
