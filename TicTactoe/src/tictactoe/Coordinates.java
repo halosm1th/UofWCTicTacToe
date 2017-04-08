@@ -6,13 +6,15 @@ public class Coordinates {
     
     private int x;
     private int y;
-    private String s;
-
-    protected Coordinates(int _x, int _y){
-        x = _x;
-        y = _y;
+    private char winLoss;
+    public Coordinates(int _x, int _y, char _winloss){
     }
-
+    
+    //deal with it
+    public void setWinLoss(char wL){//start setWinLoss
+        winLoss = wL;
+    }//end setWinLoss
+    
     protected int getX() {
         return x;
     }
@@ -20,12 +22,10 @@ public class Coordinates {
     protected int getY() {
         return y;
     }
-    
-    protected String getString() {
-        
-        String s = ""+x+","+y;
-        
-        return s;
+
+    public char getWinLoss(){return winLoss;}
+
+    public String toString(){
+        return "" + getX() + " " + getY() + " " + getWinLoss();
     }
-    
 }
